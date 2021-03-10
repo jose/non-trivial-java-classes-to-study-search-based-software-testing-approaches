@@ -12,7 +12,7 @@ and 2 branches to 16,624 statements and 7,938 branches.  The average number of
 statements is 1,109, and the average number of branches is 259.
 
 Java projects/classes and their dependencies are in the `subjects` directory and
-here is the of set of non-trivial Java classes organized by project:
+here is the set of non-trivial Java classes organized by project:
 
 | Java Project | Java Class |
 |:-------------|:-----------|

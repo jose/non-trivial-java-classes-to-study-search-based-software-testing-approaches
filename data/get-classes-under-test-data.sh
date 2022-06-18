@@ -30,7 +30,7 @@ SUBJECTS_DIR="$SCRIPT_DIR/../subjects"
 [ "$EVOSUITE_JAR" != "" ] || die "EVOSUITE_JAR is not set!"
 [ -s "$EVOSUITE_JAR" ] || die "$EVOSUITE_JAR does not exist or it is empty!"
 
-CLASSES_FILE="$SCRIPT_DIR/classes.csv"
+CLASSES_FILE="$SCRIPT_DIR/classes.txt"
 [ -s "$CLASSES_FILE" ] || die "[ERROR] $CLASSES_FILE does not exist or it is empty!"
 
 CLASSES_DATA_FILE="$SCRIPT_DIR/classes-data.csv"

@@ -30,7 +30,7 @@ SUBJECTS_DIR="$SCRIPT_DIR/../subjects"
 [ "$EVOSUITE_JAR" != "" ] || die "EVOSUITE_JAR is not set!"
 [ -s "$EVOSUITE_JAR" ] || die "$EVOSUITE_JAR does not exist or it is empty!"
 
-CLASSES_FILE="$SCRIPT_DIR/classes.txt"
+CLASSES_FILE="$SCRIPT_DIR/classes.csv"
 [ -s "$CLASSES_FILE" ] || die "[ERROR] $CLASSES_FILE does not exist or it is empty!"
 
 CLASSES_DATA_FILE="$SCRIPT_DIR/classes-data.csv"
@@ -42,8 +42,8 @@ echo "project_name,class_name,num_lines,num_statements,num_branches" > "$CLASSES
 tmp_output_file="/tmp/get-classes-under-test-data-$USER-$$.txt"
 
 tail -n +2 "$CLASSES_FILE" | while read -r line; do
-  subject_name=$(echo "$line" | cut -f1 -d'	')
-  class_name=$(echo "$line" | cut -f2 -d'	')
+  subject_name=$(echo "$line" | cut -f1 -d',')
+  class_name=$(echo "$line" | cut -f2 -d',')
   echo "[DEBUG] $subject_name::$class_name"
 
   >"$tmp_output_file" # Clean up temporary file
